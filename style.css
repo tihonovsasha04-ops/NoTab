@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+font-family: "Noto Sans", sans-serif;
+font-family: "Montserrat", sans-serif;
+font-family: "Avenir", sans-serif;
+*/
+
+@font-face {
+    font-family: "Avenir";
+    src: url("fonts/Avenir-Heavy.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+a:active {
+    opacity: 1;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container--small {
+    max-width: 1000px;
+}
+
+/* header */
+.header__container {
+    display: flex;
+    align-items: center;
+    gap: 110px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header__login {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: underline;
+}
+
+/* welcome */
+.welcome {
+    padding-bottom: 50px;
+}
+
+.welcome__container {
+    position: relative;
+}
+
+.welcome__container::after {
+    content: "";
+    background-image: url("/images/bg-welcome.svg");
+    width: 650px;
+    height: 790px;
+    position: absolute;
+    right: -170px;
+    top: -240px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-105deg);
+    z-index: -10;
+}
+
+.welcome__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    min-height: 700px;
+}
+
+.welcome__title {
+    font-size: 64px;
+    line-height: 1.09;
+    margin-bottom: 130px;
+}
+
+.welcome__text {
+    font-size: 20px;
+    padding-left: 130px;
+    width: 380px;
+    position: relative;
+}
+
+.welcome__text::before {
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    left: 20px;
+    top: -80px;
+    background: rgba(96, 92, 234, 0.5);
+    filter: blur(50px);
+    z-index: -10;
+    animation: lighter 1s infinite alternate;
+}
+
+@keyframes lighter {
+    0% {
+        background: rgba(96, 92, 234, 0.3);
+    }
+    100% {
+        background: rgba(96, 92, 234, 0.7);
+    }
+}
+
+.welcome__text::after {
+    content: "";
+    width: 120px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    transform: rotate(120deg);
+    z-index: -5;
+}
+
+.welcome__img {
+    width: 600px;
+    position: absolute;
+    right: -30px;
+    top: -140px;
+    z-index: -5;
+}
+
+.welcome__cta {
+    padding-right: 60px;
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta__text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.cta__links {
+    display: flex;
+    gap: 30px;
+}
+
+/* mision */
+.mision {
+    padding: 150px 85px;
+    position: relative;
+}
+
+.mision__container {
+    /* padding: 150px 30px; */
+}
+
+.mision__img {
+    position: absolute;
+    transform: rotate(90deg) translate(-43%);
+    top: 0;
+    right: 50%;
+    z-index: -1;
+}
+
+.mision__desc {
+    width: 320px;
+    margin-left: auto;
+}
+
+.mision__title {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.mision__title::after {
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    right: 55px;
+    top: 7px;
+    background: #F101BF;
+    opacity: 0.7;
+    filter: blur(50px);
+    z-index: -1;
+}
+
+/* common */
+.common {
+    margin-top: 100px;
+    padding: 50px 0;
+}
+
+.common:nth-child(even) .container {
+    flex-direction: row-reverse;
+}
+
+.common__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.common__col {
+    max-width: 410px;
+}
+
+.common__title {
+    margin-bottom: 20px;
+}
+
+.scanner {
+    background: linear-gradient(180deg, #000000 -3%, rgba(0, 0, 0, 0) 56%, #000000 84%), url("images/bg-scanner.jpg");
+    background-size: cover;
+}
+
+.code {
+    background: linear-gradient(180deg, #000000 -3%, rgba(0, 0, 0, 0) 56%, #000000 84%), url("images/bg-code.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* footer */
+.footer {
+    padding: 100px 0 50px 0;
+    overflow: hidden;
+}
+
+.footer__container {
+    position: relative;
+}
+
+.footer__container::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: -170px;
+    bottom: -200px;
+    z-index: -1;
+    background: linear-gradient(12deg, #F101BF 3%, #0066FF 97%);
+    opacity: 0.3;
+    filter: blur(125px);
+    transform: rotate(6deg);
+
+}
+
+.footer__cta {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 125px;
+}
+
+.footer__cta .cta__text {
+    font-size: 24px;
+}
+
+.footer__cta .cta__img {
+    height: 80px;
+}
+
+.footer__cta .cta__links {
+    gap: 60px;
+}
+
+.footer__row {
+    font-family: "Avenir", sans-serif;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo-link {
+    display: inline-block;
+    margin-bottom: 15px;
+
+}
+
+.footer__contact {
+    margin-bottom: 15px;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 940px) {
+    .welcome__cta {
+        padding-right: 0;
+    }
+
+    .welcome__img {
+        right: -180px;
+    }
+
+    .cta__text {
+        font-size: 24px;
+    }
+
+    .mision__img {
+        right: 60%;
+    }
+
+    .mision {
+        padding: 150px 0;
+    }
+
+    .common__col, .mision__desc {
+        max-width: 370px;
+    }
+
+    .mision__desc {
+        width: unset;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo__img {
+        width: 50px;
+    }
+
+    .logo__text {
+        width: 70px;
+    }
+
+    .header {
+        padding: 20px 0;
+    }
+
+    .header__login img {
+        display: none;
+    }
+
+    .header__container {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .welcome__row {
+        min-height: 420px;
+        margin-bottom: 40px;
+    }
+
+    .welcome__container::after {
+        width: 700px;
+        height: 826px;
+        right: -140px;
+        top: -190px;
+        background-image: url("images/bg-welcome-mobile.svg");
+        transform: rotate(-90deg);
+    }
+
+    .welcome__img {
+        width: 350px;
+        right: -60px;
+        top: -60px;
+    }
+
+    .welcome__title {
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+    .welcome__text {
+        padding-left: 0;
+        font-size: 16px;
+        width: 60%;
+    }
+
+    .welcome__text::before, .welcome__text::after {
+        display: none;
+    }
+
+    .cta__img, .footer__cta .cta__img {
+        height: 60px;
+    }
+
+    .cta__links, .footer__cta .cta__links {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .cta {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .mision {
+        padding: 50px 0 0;
+    }
+
+    .mision__img {
+        margin-top: -20px;
+        width: 320px;
+        position: static;
+        transform: none;
+        align-self: center;
+    }
+
+    .mision__title::after {
+        right: auto;
+        left: -24px;
+        top: -28px;
+    }
+
+    .mision__container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .mision__desc {
+        margin-left: unset;
+    }
+
+    .mision__title {
+        margin-bottom: 25px;
+    }
+
+    .common__col, .mision__desc {
+        max-width: unset;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .common {
+        margin-top: 0;
+        padding: 0;
+        background: none;
+    }
+
+    .common__container, .common:nth-child(even) .container {
+        flex-direction: column-reverse;
+        gap: 70px;
+    }
+
+    .common__img {
+        align-self: center;
+        width: 280px;
+    }
+
+    .scanner {
+        margin-top: 0;
+    }
+
+    .scanner::before {
+        background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%), url("images/bg-scanner.jpg");
+    }
+
+    .code::before {
+        background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%), url("images/bg-code.jpg");
+    }
+
+    .common::before {
+        content: "";
+        margin-bottom: -100px;
+        display: block;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .footer {
+        padding: 70px 0 30px;
+    }
+
+    .footer__cta {
+        margin-bottom: 50px;
+    }
+
+    .footer__row {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .footer__contact {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 520px) {
+    .welcome__img {
+        right: -170px;
+    }
+
+    .logo__img, .logo__text {
+        width: 50px;
+    }
+
+    .header__login {
+        font-size: 14px;
+    }
+}
